@@ -1,0 +1,1 @@
+{function: throw new Exception('Hello')}

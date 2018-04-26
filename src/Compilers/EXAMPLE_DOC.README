@@ -1,0 +1,38 @@
+<?php
+
+namespace PytoTPL\Compilers;
+
+use PytoTPL\Compilers\AbstractCompiler;
+/**
+ * Usage: Usage description here maybe
+ */
+class PytoTPL_{Your compiler name here} extends AbstractCompiler
+{
+    /**
+     * Get the regex pattern for current compiler
+     * 
+     * @return string
+     */
+    public function getPattern()
+    {
+        return "/{Your regex pattern here}/";
+    }
+
+    /**
+     * Pass all the regex matches to current compiler
+     * 
+     * @param  array $matches 
+     * @return string
+     */
+    public function compile($matches)
+    {
+        $variable = $matches;// do something with $matches before assigning it to $variable
+
+        // yep, continue making magic here! :)
+
+        // make sure to return a string (preferably wrapped)
+        return $this->compiler->wrap(
+            $variable
+        );
+    }
+}
